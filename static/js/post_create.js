@@ -86,7 +86,7 @@ fileInput.addEventListener("change", function () {
 
         image.onload = function () {
       
-        let height = image.height / 25;
+        let height = image.height / 4;
         console.log(height);
         container.style.paddingBottom = `${height}px`;
         }
@@ -119,4 +119,3 @@ del.addEventListener('click', () => {
     fileInput.value = ''; /*!!!여기!!!*/
     console.log(fileInput.value);
 });
-

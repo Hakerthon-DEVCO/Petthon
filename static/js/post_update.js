@@ -1,20 +1,23 @@
-const fileInput = document.getElementById('fileInput');
-const boolInput = document.getElementById('boolInput');
-const file = document.getElementById('fileName');
-const del = document.getElementById('del');
-let change = document.getElementById('change');
+const fileInput = document.getElementById('fileInput'); //파일 선택 input 찾기
+const boolInput = document.getElementById('boolInput'); //사진 있냐없냐 input 찾기
+const file = document.getElementById('fileName'); //파일 이름 뜨는 부분 찾기
+const del = document.getElementById('del'); //삭제 버튼 찾기
+let change = document.getElementById('change'); //img 태그 찾기
+let upload = document.getElementById('upload'); //'사진 업로드 해주세요' 부분 찾기
 
 // 이미지가 이미 선택되어 있는지 확인 후, 파일 이름을 표시
 window.onload=function(){
-
   if (change.src != '') {
-    // console.log(encodeURI(change.src));
+    upload.style.display = 'none'; //사진이 있으면 '사진 업로드 해주세요' 안 보이게
+    
+    //파일 이름 쪼개기
     let last = change.src.lastIndexOf('/')
     let name = change.src.substring(last+1, change.src.length);
     name = decodeURIComponent(name);
     let test = name.substring(0, name.lastIndexOf('.'));
     let extension = name.substring(name.lastIndexOf('.'), name.length+1);
 
+    //사진 파일 이름이 있을 때
     if (name !== '') {
       if(test.length <= 10) {
         file.innerText = `${name}`;
@@ -82,6 +85,19 @@ fileInput.addEventListener("change", function () {
       let shortenedFileName = fileName.substring(0, 7) + '...' + extension;
       file.textContent = shortenedFileName;
     }
+
+    let image = new Image();
+    let select = fileInput.files[0]
+    image.src = URL.createObjectURL(select);
+
+    let container = document.querySelector('.container');
+
+    image.onload = function () {
+  
+    let height = image.height / 4;
+    console.log(height);
+    container.style.paddingBottom = `${height}px`;
+    }
   }
 });
 
@@ -103,6 +119,7 @@ imageInput.addEventListener('change', (event) => {
 });
 
 del.addEventListener('click', () => {
+  upload.style.display = 'block'; //사진 삭제하면 '사진 업로드 해주세요!' 뜨게하기
   imageView.src = '';
   imageView.style.display = 'none';
   file.textContent = '';
@@ -116,8 +133,6 @@ let submitButton = document.getElementById('stop'); //등록 버튼 찾기
 let tvalue = document.getElementById('postTitle'); //내용 부분 찾기
 let alert = document.getElementById('alertText'); //경고문 찾기
 alert.style.display = 'none'; //경고문 처음엔 안 보이게
-
-let upload = document.getElementById('upload'); //'사진 업로드 해주세요' 부분 찾기
 
 submitButton.addEventListener('click', function (event) {
   let text = tvalue.value.trim(); // textarea의 텍스트를 가져와서 앞뒤 공백을 제거

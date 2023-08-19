@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'SUITE-Regular';
+}
+
+body {
+    height: 100%;
+}
+
+.container {
+    width: 375px;
+    height: 100%;
+    /* padding-bottom: 100px; */
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    background-color: #FFF;
+    /* border: 1px solid black; */
+    
+   
+
+}
+/* 만든거 나중에 연결해야할듯 */
+.nav_bar {
+    width: 375px;
+    height: 57px;
+    background-color: #FFF;
+    /* border: 1px solid greenyellow; */
+   
+}
+/* 사람 아이콘  */
+
+.user_logo{
+    width: 69px;
+    height: 69px;
+    margin-left: 154px;
+    margin-top: 33px;
+}
+/* 작성글/갯수 있는 전체 부분 */
+.profile{
+    /* border: 1px solid red; */
+    padding-left: 154px;
+}
+/* 작성글  */
+.profile_name{
+    font-size: 18px;
+    font-weight: bold;
+    transform: translateX(4px);
+    
+}
+/* 갯수 */
+.profile_post{
+    /* border: 1px solid blue; */
+    border-radius: 10px;
+    width: 141px;
+    height: 78px;
+    transform: translateX(-36px);
+    margin-top: 14px;
+    margin-bottom: 23px;
+    background-color: #8DB5D9;
+
+}
+/* 작성글 글자 */
+.profile_post > p {
+    text-align: center;
+    color: #686868;
+    padding-top: 10px;
+
+}
+
+/* 내가 작성한 게시글 */
+.post{
+    margin-left: 23px;
+    margin-bottom: 16px;
+
+}
+
+/* 선 부분 */
+.line{
+    width: 323px;
+    margin-left: 22px;
+    
+
+
+}
+
+
+
+.post_1{
+    padding-left: 30px;
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+/* 안녕하세요 복돌이 귀엽죠 */
+.post_1 > a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+/* 날짜 부분 */
+.post_1 > h6{
+    margin-left: 100px;
+    transform: translateY(-8px);
+}
+
+.post_2{
+    padding-left: 30px;
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.post_2 > a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.post_2 > h6{
+    margin-left: 100px;
+    transform: translateY(-8px);
+}
+.post_3{
+    padding-left: 30px;
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.post_3 > a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.post_3 > h6{
+    margin-left: 100px;
+    transform: translateY(-8px);
+}
+.post_4{
+    padding-left: 30px;
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.post_4 > a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.post_4 > h6{
+    margin-left: 100px;
+    transform: translateY(-8px);
+}
+.post_5{
+    padding-left: 30px;
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.post_5 > a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.post_5 > h6{
+    margin-left: 100px;
+    transform: translateY(-8px);
+}
+
+/* 로그아웃 버튼 */
+.button{
+   display: flex;
+  
+}
+
+/* a 태그 연결된건 여기라.. 대부분 여기 고치시는게 편하실거예요 */
+.logout {
+    text-decoration: none;
+    margin: 21px 160px ;
+    color:#000000;
+    font-weight: 600;
+    margin-top: 20px;
+    
+}

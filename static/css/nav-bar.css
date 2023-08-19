@@ -1,17 +1,31 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
     /* height: 100%; */
 }
 
-.container {
+/* .container {
     font-family: 'SUITE-Regular';
-    width: 375px; /* 전체 width 조절 */
-    margin: 0 auto; /* 가운데로 오게 하기 */
+    width: 375px; 
+    margin: 0 auto; 
     position: relative;
-    /* padding-bottom: 100px; */
+
     z-index:0;
-    /* border: 1px solid black; */
+
+    background-color: #BFDCF6;
+} */
+
+.nav_bar {
+    width: 375px; 
+    height: 57px;
+    margin: 0 auto; 
     background-color: #BFDCF6;
 }
 
@@ -19,33 +33,32 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    flex-direction: row;
-    /* justify-content: space-around; */
+    justify-content:space-between
 }
 
 
 .back_icon{
-    /* border: 1px solid rebeccapurple; */
     width: 12px;
     height: 22px;
-    margin-top: 22px;
+    margin-top: 17px;
     margin-left: 13px;
-
 }
 
 
-.logo_icon{
-    /* border: 1px solid pink; */
-    margin-left: 31%
+.logo_icon > img {
+    width: 77px;
+    height: 65px;
+    margin-left: 25px;
 }
 
-.login_icon{
-    margin-top: 22px;
-    margin-left: 92px;
+.login {
+    padding: 17px 13px 0px 0px;
+    font-family: 'SUITE-Regular';
+    font-size: 17px;
 }
-.login_icon > a {
+
+
+.login > a {
     text-decoration: none;
     color: black;
-   
-
 }

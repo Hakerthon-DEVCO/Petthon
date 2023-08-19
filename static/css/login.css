@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    width: 375px; /* 전체 width 조절 */
+    height: 100vh;
+    height: -webkit-fill-available;
+    height: fill-available;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0 auto; /* 가운데로 오게 하기 */
+    position: relative;
+    padding: 0;
+    z-index:0;
+    padding-bottom: 150px;
+    font-family: 'SUITE-Regular';
+}
+
+/*로고 부분*/
+#logo {
+    /* border: 1px solid blue; */
+    margin: 0 auto;
+}
+
+#logo > img {
+    margin: 66px 0px 40px 0px;
+    width: 205px;
+    height: 88px;
+}
+/*로고 부분 끝*/
+
+/*입력창 부분*/
+.user {
+    width: 292px;
+    margin: 0 auto;
+}
+
+form > input {
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 21px;
+    text-indent: 10px;
+}
+
+form > input::placeholder {
+    color: gray;
+}
+
+.buttons {
+    margin-top: 27px;
+}
+
+.buttonStyle {
+    border: none;
+    margin: 0;
+    width: 295px;
+    height: 55px;
+    background-color: #8DB5D9;
+    color: white;
+    border-radius: 10px;
+    margin-bottom:20px;
+}
+
+form > input, .buttonStyle:hover {
+    cursor: pointer;
+}
+
+.inputStyle {
+    width:288px;
+    height:40px;
+}

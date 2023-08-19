@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'SUITE-Regular';
+}
+
+body {
+    height: 100%;
+}
+
+.container {
+    width: 375px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    z-index: 0;
+    background-color: #FFF;
+    border: 1px solid black;
+   
+
+}
+
+.nav-bar {
+    width: 375px;
+    height: 50px;
+    background-color: #FFF;
+   
+}
+
+.logo{
+    width: 205px;
+    height: 88px;
+    margin-left: 85px;
+    margin-top: 100px;
+}
+
+/* 닉네임/이메일/비밀번호/비밀번호 재설정 text */
+form>p {
+    margin-bottom: 15px;
+    color: #000;
+    font-family: 'GmarketSansMedium';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 37px;
+}
+
+::placeholder{
+    color: #989898;
+    padding-left: 10px;
+}
+
+/* 닉네임 인풋 */
+.nickname {
+    width: 248px;
+    height: 28px;
+    border-radius: 10px;
+    border: 1px solid #989898;
+    background: #FFF;
+    margin-left: 56px;
+    margin-top: 23px;
+   
+}
+
+
+/* 회원가입 버튼 */
+.button button {
+    width: 300px;
+    height: 65px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8DB5D9;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 65px;
+    margin-bottom: 194px;
+    margin-left: 38px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+/* 하단바 태그 */
+
+#ft {
+    margin: 0;
+    padding: 0;
+    z-index: 30;
+    background-color: white;
+    width: 375px;
+    height: 54px;
+    position: fixed;
+    bottom: 0;
+
+    border-radius: 0.625rem 0.625rem 0rem 0rem;
+    background: #FFF;
+    box-shadow: 0px -4px 8px 0px rgba(162, 162, 162, 0.25);
+}
+
+.ftIcons {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.back > a > img {
+    width: 25x;
+    height: 23px;
+    margin: 15px 0px;
+}
+
+.home > a > img {
+    width: 31px;
+    height: 31px;
+    margin: 11px 0px;
+}
+
+.user > a > img {
+    width: 27px;
+    height: 27px;
+    margin: 13px 0px;
+}

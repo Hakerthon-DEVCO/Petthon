@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'SUITE-Regular';
+}
+
+body {
+    height: 100%;
+}
+
+.container {
+    width: 375px;
+    height: 100%;
+    padding-bottom: 130px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    background-color: #FFF;
+    border: 1px solid black;
+    
+
+}
+
+.nav_bar {
+    width: 375px;
+    height: 57px;
+    /* border: 1px solid blue */
+
+   
+   
+}
+
+/* 동물/글 작성 부분 */
+.catogory_name{
+    display: flex;
+    flex-direction: column;
+}
+
+/* 동물-카테고리 이름 */
+.name{
+    /* border: 1px solid green; */
+    margin-top: 67px;
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* 글 작성 페이지 연결 부분 */
+.name > a {
+    font-size: 15px;
+    margin-left: 220px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+
+}
+
+/* 글 리스트 부분 */
+
+.items{
+    transform: translateY(-19px);
+}
+
+/* 글 게시글/날짜 묶여있는 부분 */
+
+.content1{
+    /* border: 1px solid red; */
+    display: flex;
+    /* border: 1px solid red; */
+    
+
+}
+
+.content1 > a{
+    text-decoration: none;
+    display: flex;
+    /* border: 1px solid red; */
+    margin-left: 11px;
+    height: 73px;
+    margin-bottom: -30px;
+    
+}
+/* 게시글 제목 부분 - 푸바오는 귀여움  */
+.item > p {
+    color: black;
+    font-size: 15px;
+    margin-top: 13px;
+    
+    
+    
+
+}
+/* 게시글 날짜 */
+.item > h6 {
+    color: black;
+    transform: translateX(180px);
+    color: #989797;
+    font-size: 11px;
+    margin-right: 13px;
+    margin-top: 16px;
+
+}
+
+
+
+/* 페이지네이션 하려한건데 어려울거 같아서 이거 지우시고 새로 하셔도 돼요 */
+
+.pagination_button{
+    margin-left: 95px;
+    margin-top: 30px;
+    display: flex;
+    gap: 4px;
+    
+}
+.pagination_button > button {
+    background: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    cursor: pointer;
+    
+
+}
+
+::after , ::before {
+    box-sizing: border-box;
+}
+
+.page-btn {
+
+    color: #8DB5D9;
+}
+
+.page-btn.active{
+    color: cornflowerblue;
+}
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petthon: 로그인</title>
+    <link rel="stylesheet" href="../static/css/login.css"> <!--{% static 'css/login.css' %}-->
+</head>
+<body>
+    <div class = "container">
+        <!--로고 부분-->
+        <div id="logo"> 
+            <img src="../static/img/tipton.png" alt="로고 사진"> <!-- {% static 'img/tipton.png' %}-->
+        </div>
+        <!--로고 부분 끝-->
+
+        <!--★★입력창 form 부분-->
+        <form  name="login-form" action="" method="post" class = "user">
+            <input type="text" placeholder="ID" class="inputStyle" value=""> <!--★★아이디 입력 받는 부분-->
+            <input type="password" placeholder="PW" class="inputStyle"> <!--★★비밀번호 입력 받는 부분-->
+            <div class = "buttons"> <!--로그인/회원가입 버튼들 -->
+                <button type="submit" class="buttonStyle" value="">Log in</button><br> <!--로그인 버튼-->
+                <a href=""><!--★★회원가입 페이지로 url 연결-->
+                    <button type="button" class ="buttonStyle">Sign up</button> <!--회원가입 버튼-->
+                </a>
+            </div>
+        </form>
+        <!--입력창 form 끝-->
+    </div>
+</body>
+</html>

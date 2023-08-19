@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petthon: 글 등록</title>
+    <link rel="stylesheet" href="../static/css/post_create.css"> <!--{% static 'css/post_create.css' %}-->
+</head>
+<body>
+    <div class="container">    
+        <form name="writeText" class="editText" method="POST">
+            
+            <div class="pushBtn"> <!--등록 버튼-->
+                <button type="submit" id="stop">등록</button>
+            </div>
+
+            
+            <p id="alertText">제목을 작성해주세요!</p>
+
+            <div>
+                <p class="title">제목:</p> <!--제목 부분-->
+                <textarea name="title" id="postTitle" rows="0" maxlength="17" oninput="maxLengthCheck(this)"
+                placeholder="17자 이내로 제목을 입력해주세요."></textarea> 
+            </div>
+            
+            <div>
+                <p class="name">이름:</p> <!--반려동물 이름 부분-->
+                <textarea name="title" id="name" rows="0" maxlength="17" oninput="maxLengthCheck(this)"
+                placeholder="반려동물 이름을 알려주세요!"></textarea>
+            </div>
+
+            <div> 
+                <p class="age">나이:</p> <!--반려동물 나이 부분-->
+                <textarea name="title" id="age" rows="0" maxlength="2" oninput="maxLengthCheck(this)"
+                placeholder="반려동물 나이를 알려주세요! (숫자만)"></textarea>
+            </div>
+            
+            <p class="text">내용</p> <!--게시글 내용 부분-->
+            <textarea name="edit" rows="0" id="editArea" maxlength="150" oninput="maxLengthCheck(this)"
+            placeholder="반려동물 자랑을 적어주세요!&#10;&#10;ex)우리 집 고양이 귀엽죠?"></textarea>
+            <div id="charCount">(0 / 150)</div> <!--글자수-->
+
+
+            <div class="imageArea"> <!--업로드 한 사진 부분-->
+                <p class="picture">사진</p>
+                <p id="upload">사진을 업로드 해주세요!</p>
+                <img src="" alt="" id = "change">
+                <div id="del">&#215;</div>
+            </div>
+
+            <div class="image"> <!--사진 등록 부분-->
+                <label for="fileInput" id="imageButton">
+                    <img src="../static/img/camera.png" alt="파일 선택하기"> <!--{% static 'img/camera.png' %}-->
+                </label>
+                <input type="file" id="fileInput"> <!--파일 선택-->
+                <span id="fileName"></span>
+            </div>
+        </form>
+
+    <script src="../static/js/post_create.js"></script> <!--{% static 'js/post_create.js' %}-->
+</body>
+</html>

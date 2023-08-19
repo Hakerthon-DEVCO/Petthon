@@ -33,6 +33,7 @@
             </div>
             
             <p class="text">내용</p> <!--게시글 내용 부분-->
+            <input type="hidden" id="boolInput" name="image_del" value="Y">
             <textarea name="edit" rows="0" id="editArea" maxlength="150" oninput="maxLengthCheck(this)"><!--★★여기 게시글 부분--></textarea>
             <div id="charCount">(0 / 150)</div> <!--글자수-->
 
@@ -40,7 +41,7 @@
             <div class="imageArea"> <!--업로드 한 사진 부분-->
                 <p class="picture">사진</p>
                 <p id="upload">사진을 업로드 해주세요!</p>
-                <img src="" alt="" id = "change"> <!--★★여기 사용자가 선택한 사진 부분-->
+                <img src="../static/img/cat.png" alt="" id = "change"> <!--★★여기 사용자가 선택한 사진 부분-->
                 <div id="del">&#215;</div>
             </div>
 
@@ -53,6 +54,6 @@
             </div>
         </form>
 
-    <script src="../static/js/post_create.js"></script> <!--{% static 'js/post_update.js' %}-->
+    <script src="../static/js/post_update.js"></script> <!--{% static 'js/post_update.js' %}-->
 </body>
 </html>

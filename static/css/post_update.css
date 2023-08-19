@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 375px; 
+    height: 100%;
+    padding-bottom: 100px;
+    margin: 0 auto; 
+    position: relative;
+    padding: 0;
+    z-index:0;
+    font-family: 'SUITE-Regular';
+}
+
+/* 상단 부분 */
+.pushBtn {
+    height: 50px;
+    margin: 20px 0px 30px 0px;
+    /* border-bottom: 1px solid #D5D5D5; */
+}
+
+.pushBtn > button {
+    font-family: 'SUITE-Regular';
+    font-size: 16px;
+    /* font-weight: bold; */
+    width: 59px;
+    height: 28px;
+    float: right;
+    margin: 10px 0px;
+    background-color: #8DB5D9;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 3px;
+    color: white;
+}
+/* 상단 부분 끝 */
+
+/* 글 작성 부분 */
+.editText {
+    width: 333px;
+    margin: 0 auto;
+}
+
+.title, .name, .age {
+    /* font-size: 20px; */
+    float: left;
+    margin: 0px 5px 0px 0px;
+    padding-top: 6px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.name, .age {
+    font-size: 15px;
+}
+
+#postTitle, #name, #age{
+    border-radius: 10px;
+    border-bottom: 1px solid #d9d9d9;
+    height: 26px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    /* margin-bottom: 40px; */
+    font-family: 'SUITE-Regular';
+    padding: 7px 0px 0px 5px;
+    resize: none;
+}
+
+#postTitle{
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 280px;
+}
+
+#name, #age {
+    font-size: 15px;
+    width: 290px;
+}
+
+#age {
+    margin-bottom: 40px;
+}
+
+#postTitle::placeholder, #name::placeholder, #age::placeholder {
+    color: #B6B6B6;
+}
+
+.text {
+    margin: 0px 0px 10px 0px;
+    font-size: 17px;
+}
+
+#editArea {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 'SUITE-Regular';
+    width: 330px;
+    min-height: 30px;
+    text-align: left;
+    resize: none;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    word-break: break-all;
+    padding: 7px;
+}
+
+
+#editArea::placeholder {
+    font-size: 16px;
+    color: #B6B6B6;
+}
+
+.editText > img {
+    width: 330px;
+    /* height: 200px; */
+}
+
+#charCount { /* 글자 수 세주는 부분 */
+    font-size: 14px;
+    color: #B9B9B9;
+    padding: 10px 4px;
+    float: right;
+    margin-bottom: 20px;
+} 
+
+.imageArea {
+    margin-top: 40px;
+}
+
+
+.picture {
+    margin: 0;
+    font-size: 17px;
+}
+
+#upload {
+    color: #B6B6B6;
+    display: block;
+}
+
+#change {
+    position: absolute;
+    z-index: 0;
+    margin-top: 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+}
+
+.imageArea:hover + .del {
+    display: inline-block;
+}
+
+/* 글 고치기 부분 끝 */
+
+/*하단 부분 -사진 첨부*/
+.image { 
+    border-top: 1px solid #D5D5D5;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 30;
+    background-color: white;
+    width: 375px;
+    height: 54px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#fileInput { /*파일 선택, 이름 등 글자 숨기기*/
+    display: none;
+}
+
+/* input file -> 이미지 버튼으로 스타일링 */
+#imageButton {
+    display: block;
+    cursor: pointer;
+    float: left;
+}
+
+#imageButton img {
+    width: 30px; 
+    height: 30px;
+    border-radius: 5px;
+    margin: 12px 0px 18px 18px;
+    border: none;
+}
+/*하단 부분-사진 첨부 끝*/
+
+#fileName {
+    padding: 0;
+    margin: 20px 0px 18px 15px;
+    font-size: 11px;
+    float: left;
+    color: #B9B9B9;
+}
+
+#del {
+    display: inline-block;
+    clear: both;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    background-color: #e5e5e5;
+    right: 10px;
+    font-size: 19px;
+    text-align: center;
+    color: rgb(107, 107, 107);
+    display: none;
+    cursor: pointer;
+    padding: 2px 1px 0px 1px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 50;
+}
+
+
+
+#alertText {
+    font-size: 14px;
+    padding: 0;
+    margin-top: 10px;
+    color: rgb(230, 78, 78);
+    /* text-align: center; */
+}

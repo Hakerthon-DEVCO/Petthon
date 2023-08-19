@@ -38,3 +38,14 @@ body {
     /* border: 1px solid pink; */
     margin-left: 31%
 }
+
+.login_icon{
+    margin-top: 22px;
+    margin-left: 92px;
+}
+.login_icon > a {
+    text-decoration: none;
+    color: black;
+   
+
+}

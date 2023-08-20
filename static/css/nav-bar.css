@@ -36,6 +36,11 @@ body {
     justify-content:space-between
 }
 
+.icons div {
+    width: 125px;
+    /* border: 1px solid gray; */
+}
+
 
 .back_icon{
     width: 12px;
@@ -53,8 +58,10 @@ body {
 
 .login {
     padding: 17px 13px 0px 0px;
+    /* padding-top: 17px; */
     font-family: 'SUITE-Regular';
     font-size: 17px;
+    text-align: right;
 }
 
 

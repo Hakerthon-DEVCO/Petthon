@@ -78,18 +78,18 @@ fileInput.addEventListener("change", function () {
         file.textContent = shortenedFileName;
         }
 
-        let image = new Image();
-        let select = fileInput.files[0]
-        image.src = URL.createObjectURL(select);
+        // let image = new Image();
+        // let select = fileInput.files[0]
+        // image.src = URL.createObjectURL(select);
 
-        let container = document.querySelector('.container');
+        // let container = document.querySelector('.container');
 
-        image.onload = function () {
+        // image.onload = function () {
       
-        let height = image.height / 4;
-        console.log(height);
-        container.style.paddingBottom = `${height}px`;
-        }
+        // let height = image.height / 4;
+        // console.log(height);
+        // container.style.paddingBottom = `${height}px`;
+        // }
     } 
 });
 

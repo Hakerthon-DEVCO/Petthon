@@ -49,6 +49,10 @@ body {
     margin-left: 13px;
 }
 
+.back_icon > img {
+    cursor: pointer;
+}
+
 
 .logo_icon > a > img {
     width: 80px;

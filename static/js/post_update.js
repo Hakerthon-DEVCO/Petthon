@@ -9,6 +9,13 @@ let upload = document.getElementById('upload'); //'사진 업로드 해주세요
 window.onload=function(){
   if (change.src != '') {
     upload.style.display = 'none'; //사진이 있으면 '사진 업로드 해주세요' 안 보이게
+    // let img = new Image();
+    // img.src = change.src;
+    // let padding = img.height / 2;
+    // console.log(padding);
+    // let container = document.querySelector('.container');
+    // container.style.paddingBottom = `${padding}px`;
+    
     
     //파일 이름 쪼개기
     let last = change.src.lastIndexOf('/')
@@ -27,6 +34,9 @@ window.onload=function(){
         file.innerText = `${short}`;
       }
       del.style.display = 'inline-block';
+    }
+    else {
+      upload.style.display = 'block';
     }
   }
 };
@@ -73,8 +83,9 @@ function maxLengthCheck(object) {
 // 파일 선택이 완료되었을 때의 이벤트를 처리
 fileInput.addEventListener("change", function () {
   if (fileInput.files.length > 0) {
+    upload.style.display = 'none';
     let fileName = fileInput.files[0].name;
-    console.log(fileName);
+    // console.log(fileName);
     let imgName = fileName.substring(0, fileName.lastIndexOf('.'));
     let extension = fileName.substring(fileName.lastIndexOf('.'), fileName.length + 1);
 
@@ -86,18 +97,18 @@ fileInput.addEventListener("change", function () {
       file.textContent = shortenedFileName;
     }
 
-    let image = new Image();
-    let select = fileInput.files[0]
-    image.src = URL.createObjectURL(select);
+    // let image = new Image();
+    // let select = fileInput.files[0]
+    // image.src = URL.createObjectURL(select);
 
-    let container = document.querySelector('.container');
+    // let container = document.querySelector('.container');
 
-    image.onload = function () {
+    // image.onload = function () {
   
-    let height = image.height / 4;
-    console.log(height);
-    container.style.paddingBottom = `${height}px`;
-    }
+    // let height = image.height;
+    // console.log(height);
+    // container.style.paddingBottom = `${height}px`;
+    // }
   }
 });
 

@@ -103,8 +103,9 @@ body {
 
 .add {
     float: right;
-    font-size: 17px;
-    margin-top: 19px;
+    font-size: 16px;
+    margin-top: 24px;
+    cursor: pointer;
 }
 
 .add > img {
@@ -113,10 +114,12 @@ body {
     float: right;
     transform: scaleX(-1);
     margin: 6px 20px 0px 5px;
+    cursor: pointer;
 }
 
 .post {
     font-size: 16px;
     padding-left: 19px;
     margin-bottom: 11px;
+    cursor: pointer;
 }

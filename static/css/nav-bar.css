@@ -50,10 +50,12 @@ body {
 }
 
 
-.logo_icon > img {
-    width: 77px;
-    height: 65px;
-    margin-left: 25px;
+.logo_icon > a > img {
+    width: 80px;
+    height: 70px;
+    margin-left: 19px;
+    transform: translateY(-3px);
+    /* transform: translateX(-5px); */
 }
 
 .login {

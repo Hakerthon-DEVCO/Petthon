@@ -35,7 +35,7 @@ body {
     height: 69px;
     margin-left: 154px;
     margin-top: 33px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 /* 작성글/갯수 있는 전체 부분 */
 .profile{

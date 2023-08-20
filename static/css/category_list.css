@@ -23,18 +23,9 @@ body {
     flex-direction: column;
     z-index: 0;
     background-color: #FFF;
-    border: 1px solid black;
-    
 
 }
 
-.nav_bar {
-    width: 375px;
-    height: 57px;
-    /* border: 1px solid blue */
-
-   
-   
 }
 
 /* 동물/글 작성 부분 */
@@ -55,11 +46,10 @@ body {
 /* 글 작성 페이지 연결 부분 */
 .name > a {
     font-size: 15px;
-    margin-left: 220px;
     text-decoration: none;
     color: black;
     font-weight: 500;
-
+    margin-left: 80px;
 }
 
 /* 글 리스트 부분 */
@@ -74,8 +64,6 @@ body {
     /* border: 1px solid red; */
     display: flex;
     /* border: 1px solid red; */
-    
-
 }
 
 .content1 > a{
@@ -92,9 +80,6 @@ body {
     color: black;
     font-size: 15px;
     margin-top: 13px;
-    
-    
-    
 
 }
 /* 게시글 날짜 */
@@ -103,12 +88,8 @@ body {
     transform: translateX(180px);
     color: #989797;
     font-size: 11px;
-    margin-right: 13px;
     margin-top: 16px;
-
 }
-
-
 
 /* 페이지네이션 하려한건데 어려울거 같아서 이거 지우시고 새로 하셔도 돼요 */
 
@@ -117,7 +98,7 @@ body {
     margin-top: 30px;
     display: flex;
     gap: 4px;
-    
+
 }
 .pagination_button > button {
     background: none;
@@ -127,7 +108,6 @@ body {
     -moz-appearance: none;
     border: none;
     cursor: pointer;
-    
 
 }
 

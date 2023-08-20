@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 
 from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from .forms import boardForm
 from .models import *
 
@@ -19,9 +20,36 @@ def main_page(request):
 def board_list(request):
 
     boards = Board.objects.all().order_by('-create_date')
+    page = request.GET.get('page')
+    paginator = Paginator(boards, 5)
+
+    if page is None :
+        page = 1
+
+    try :
+        page_obj = paginator.get_page(page)
+    except PageNotAnInteger :
+        page=1
+        page_obj = paginator.get_page(page)
+    except EmptyPage :
+        page = paginator.num_pages
+        page_obj = paginator.get_page(page)
+
+    leftIndex = (int(page) -2)
+    if leftIndex <1 :
+        leftIndex = 1
+
+    rightIndex = (int(page) +2)
+    if rightIndex > paginator.num_pages :
+        rightIndex = paginator.num_pages
+
+    custom_range = range(leftIndex, rightIndex+1)
 
     context = {
-        'boards': boards
+        'boards': boards,
+        'page_obj': page_obj,
+        'paginator': paginator,
+        'custom_range' : custom_range,
     }
 
     return render(request, 'boards/board_list.html', context)

@@ -24,20 +24,12 @@ body {
     z-index: 0;
     background-color: #FFF;
     /* border: 1px solid black; */
-    
-   
 
 }
-/* 만든거 나중에 연결해야할듯 */
-.nav_bar {
-    width: 375px;
-    height: 57px;
-    background-color: #FFF;
-    /* border: 1px solid greenyellow; */
    
 }
 /* 사람 아이콘  */
-
+/* 이것만 css가 안먹는데 제가 뭘 건드린걸까요...ㅜㅜㅜㅜ */
 .user_logo{
     width: 69px;
     height: 69px;

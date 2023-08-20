@@ -1,3 +1,17 @@
+//폼 제출 막기 추가
+let submit = document.getElementById('stop'); //sign up 버튼 찾기
+let id = document.getElementById('username'); //아이디 input 찾기
+let alert = document.getElementById('alert'); //경고문구 alert 찾기
+
+submit.addEventListener('click', function (event) { //sign up 버튼 누르면
+    let text = id.value.trim(); // id input 텍스트를 가져와서 앞뒤 공백을 제거
+    
+    if (text.length > 7) { //7자리 이상이면 폼 막기
+      event.preventDefault(); // 폼 제출을 막기
+      alert.style.display = 'block'; //경고문구 보이게 하기
+    }
+});
+
 function checkPassword() {
     var pass = document.getElementById("password").value;
     var pass2 = document.getElementById("password-confirm").value;

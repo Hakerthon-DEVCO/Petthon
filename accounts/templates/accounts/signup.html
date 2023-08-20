@@ -11,6 +11,7 @@
                 {% csrf_token %}
                 <!-- <p for="username">아이디</p> -->
                 <input class="nickname" type="text" id="username" name="username" placeholder="name" required>
+                <p id="alert">아이디는 7자 이하로 적어주세요!</p> <!--경고 추가-->
 
                 <!-- <p for="email">이메일</p> -->
                 <input class="nickname" type="email" id="email" name="email" placeholder="email" required>
@@ -21,7 +22,7 @@
                 <!-- <p for="password-confirm">비밀번호 확인</p> -->
                 <input class="nickname" type="password" id="password-confirm" name="password2" placeholder="password check" required>
                 <div class="button">
-                    <button type="submit" onclick="return validateForm()">Sign up</button>
+                    <button type="submit" onclick="return validateForm()" id="stop">Sign up</button>
                 </div>
             </form>
         </div>

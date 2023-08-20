@@ -121,3 +121,11 @@ form>p {
     height: 27px;
     margin: 13px 0px;
 }
+
+/*추가 경고문구 css*/
+#alert {
+    color: rgb(182, 72, 72);
+    font-size: 12px;
+    margin: 10px 0px 0px 60px;
+    display: none;
+}

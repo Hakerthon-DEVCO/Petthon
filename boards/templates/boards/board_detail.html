@@ -1,38 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nav_bar</title>
+{% extends 'nav_bar.html' %}
+{% block content %}
+{% load static %}
     <link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
-</head>
-
-<body>
-    <!--상단바 -->
-    <div class="nav_bar">
-        <div class="icons">
-            <div class="back_icon">
-                <a href="{% url 'board_list' %}">
-                    <img src="{% static 'img/_.png' %}" alt="">
-                </a>
-            </div>
-
-            <div class="logo_icon">
-                <img src="{% static 'img/image 54.png' %}" alt="">
-            </div>
-            {% if user.is_authenticated %}
-            <div class="login">
-                <a href="{% url 'accounts:my_page' pk=user.pk %}">{{ user.username }} 님</a>
-            </div>
-            {% else %}
-            <div class="login">
-                <a href="{% url 'accounts:login' %}">로그인</a>
-            </div>
-            {% endif %}
-        </div>
-    </div>
     
     <div class="container">
         <!--게시글 제목 부분-->
@@ -95,6 +64,4 @@
     </div>
 
     <script src="{% static 'js/post_detail.js' %}"></script>
-</body>
-
-</html>
+{% endblock %}

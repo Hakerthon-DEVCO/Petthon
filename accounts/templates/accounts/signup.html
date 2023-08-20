@@ -1,25 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../static/css/signup.css">
-</head>
-
-<body>
-    <div class="container">
-
-
+{% extends 'nav_bar.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
         <div class="nav-bar">
         </div>
-      
-            <img src="../static/img/image 55.png" alt="" class="logo">
-        
+            <img src="{% static 'img/image 55.png' %}" alt="" class="logo">
         <div class="input">
             <form action="" method="post" onsubmit="checkPassword()">
-         
+                {% csrf_token %}
                 <!-- <p for="username">아이디</p> -->
                 <input class="nickname" type="text" id="username" name="username" placeholder="name" required>
 
@@ -36,16 +25,6 @@
                 </div>
             </form>
         </div>
-
-    </div>
-
-
-
-
-
-
-
-    <script src="../static/js/signup.js"></script>
-</body>
-
-</html>
+</div>
+    <script src="{% static 'js/signup.js' %}"></script>
+{% endblock %}

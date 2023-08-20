@@ -1,7 +1,46 @@
-{% for board in boards %}
-<a href="{% url 'board_detail' pk=board.pk %}"> {{ board.title }} </a>
-{% endfor %}
-<hr>
-{% if user.is_authenticated %}
-<a href="{% url 'board_post' %}">글 등록하기</a>
-{% endif %}
+{% extends 'nav_bar.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/category_list.css' %}">
+
+<div class="container">
+    <div class="catogory_name">
+        <p class="name">우리 애기를 자랑합니다  <a href="{% url 'board_post' %}">글 작성 ></a></p>
+    </div>
+
+    <!-- 게시글 부분 -->
+    <div class="items">
+        <img src="{% static 'img/Vector 5.png' %}" alt="" class="line">
+        {% for board in page_obj %}
+        <div class="content1">
+            <a class="item" href="{% url 'board_detail' pk=board.pk %}">
+                <p>{{ board.title }}</p>
+                <h6>{{ board.create_date|date:'F j일' }}</h6>
+            </a>
+        </div>
+        <img class="line_1" src="{% static 'img/Line 6.png' %}" alt="">
+        {% endfor %}
+    </div>
+
+    {% if page_obj.has_other_pages %}
+    <div class="pagination_button">
+        {% if page_obj.has_previous %}
+        <button type="button" class="page-prev-btn" onclick="location.href='?page={{ page_obj.previous_page_number }}'">이전</button>
+        {% endif %}
+
+        {% for page in paginator.page_range %}
+        {% if page == page_obj.number %}
+        <button type="button" class="page-btn active" onclick="location.href='?page={{ page }}'">{{ page }}</button>
+        {% else %}
+        <button type="button" class="page-btn" onclick="location.href='?page={{ page }}'">{{ page }}</button>
+        {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <button type="button" class="page-next-btn" onclick="location.href='?page={{ page_obj.next_page_number }}'">다음</button>
+        {% endif %}
+    </div>
+    {% endif %}
+    <script src="{% static 'js/category_list.js' %}"></script>
+</div>
+{% endblock %}

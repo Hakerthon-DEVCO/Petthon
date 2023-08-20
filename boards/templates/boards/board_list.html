@@ -15,7 +15,7 @@
         <div class="content1">
             <a class="item" href="{% url 'board_detail' pk=board.pk %}">
                 <p>{{ board.title }}</p>
-                <h6>{{ board.create_date|date:'F j일' }}</h6>
+                <h6 class="h6">{{ board.create_date|date:'F j일' }}</h6>
             </a>
         </div>
         <img class="line_1" src="{% static 'img/Line 6.png' %}" alt="">

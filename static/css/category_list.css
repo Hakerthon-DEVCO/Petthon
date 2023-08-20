@@ -26,7 +26,7 @@ body {
 
 }
 
-}
+
 
 /* 동물/글 작성 부분 */
 .catogory_name{
@@ -49,7 +49,7 @@ body {
     text-decoration: none;
     color: black;
     font-weight: 500;
-    margin-left: 80px;
+    margin-left: 70px;
 }
 
 /* 글 리스트 부분 */
@@ -79,16 +79,24 @@ body {
 .item > p {
     color: black;
     font-size: 15px;
-    margin-top: 13px;
+    margin-top: 18px;
+    /* border: 1px solid blue; */
+    /* height: 15px; */
+    width: 170px;
+    margin-left: 20px;
+    
 
 }
 /* 게시글 날짜 */
-.item > h6 {
+.h6 {
+    width: 50px;
+    transform: translateX(-40px);
     color: black;
-    transform: translateX(180px);
+    margin-left: 140px;
     color: #989797;
     font-size: 11px;
-    margin-top: 16px;
+    margin-top: 20px;
+    /* border: 1px solid green; */
 }
 
 /* 페이지네이션 하려한건데 어려울거 같아서 이거 지우시고 새로 하셔도 돼요 */

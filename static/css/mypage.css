@@ -27,26 +27,41 @@ body {
 
 }
    
-}
+
 /* 사람 아이콘  */
 /* 이것만 css가 안먹는데 제가 뭘 건드린걸까요...ㅜㅜㅜㅜ */
-.user_logo{
+.user_logo > img{
     width: 69px;
     height: 69px;
     margin-left: 154px;
     margin-top: 33px;
+    border: 1px solid black;
 }
 /* 작성글/갯수 있는 전체 부분 */
 .profile{
     /* border: 1px solid red; */
     padding-left: 154px;
+
 }
 /* 작성글  */
 .profile_name{
     font-size: 18px;
     font-weight: bold;
-    transform: translateX(4px);
+    transform: translateX(6px);
+    width: 200px;
+    /* border: solid 1px red; */
+     
     
+    
+}
+
+.profile_name > p {
+    /* border: 1px solid red; */
+    width: 280px;
+    justify-content: center;
+    text-align: center;
+    transform: translateX(-110px);
+    margin-top: 11px;
 }
 /* 갯수 */
 .profile_post{
@@ -55,7 +70,7 @@ body {
     width: 141px;
     height: 78px;
     transform: translateX(-36px);
-    margin-top: 14px;
+    margin-top: 12px;
     margin-bottom: 23px;
     background-color: #8DB5D9;
 
@@ -64,7 +79,8 @@ body {
 .profile_post > p {
     text-align: center;
     color: #686868;
-    padding-top: 10px;
+    padding-top: 16px;
+
 
 }
 

@@ -1,0 +1,36 @@
+{% extends 'nav_bar.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/mypage.css' %}">
+<div class="container">
+    <!-- 프로필 이미지 부분 => 사람 아이콘 알죠? -->
+    <div class="user_logo">
+        <img src="{% static 'img/image 56.png' %}" alt="">
+    </div>
+    <div class="profile">
+        <div class="profile_name">
+            <p>{{ user.username }}</p>
+        </div>
+        <div class="profile_post">
+            <p>작성글 <br>{{ count }} </p>
+        </div>
+    </div>
+
+    <img src="{% static 'img/Vector 5.png' %}" alt="">
+
+    <div class="post">
+        <p>내가 작성한 게시글</p>
+    </div>
+    <img class="line" src="{% static 'img/Line 5.png' %}" alt="">
+    {% for board in user_posts %}
+    <div class="post_1">
+        <a href="{% url 'board_detail' pk=board.pk %}"><p>{{ board.title }}</p></a>
+        <h6>{{ board.created_date }}</h6>
+    </div>
+    <img class="line" src="{% static 'img/Line 5.png' %}" alt="">
+    {% endfor %}
+    <div class="button">
+        <a class="logout" href="{% url 'accounts:logout' %}">로그아웃</a>
+    </div>
+</div>
+{% endblock %}

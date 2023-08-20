@@ -1,0 +1,65 @@
+{% extends 'nav_bar.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
+
+<div class="container">
+    <!--게시글 제목 부분-->
+    <div class="hd">
+        <div class="title">{{ board.title }}</div> <!--★★사용자 게시글 제목-->
+    </div>
+    <!--게시글 제목 부분 끝-->
+
+    <!--게시글 부분-->
+    <div class="post">
+        <p class="petName">이름: {{ board.pet_name }}</p> <!--★★여기 반려동물 이름 부분-->
+        <p class="petAge">나이: {{ board.pet_age }}</p> <!--★★여기 반려동물 나이 부분-->
+
+        <!--★★여기 사용자 글 부분-->
+        <p class="text">
+            {{ board.content }}
+        </p>
+
+        <!--★★여기 사용자 사진 부분-->
+        {% if board.pet_image %}
+            <img src="{{ board.pet_image.url }}">
+        {% endif %}
+    </div>
+    <!--게시글 부분 끝-->
+
+    {% if user.is_authenticated %}
+    <!--모달창 / ★★남의 게시글이면 여기 없어도 되겠지?-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p class="isdelete">삭제하시겠습니까?</p>
+            <a href="#" class="close-button" id="closePopup"><p>아니오</p></a>
+            <a href="{% url 'board_delete' pk=board.pk %}"> <!--★★여기 글 삭제하는 버튼이라서 게시글 카테고리로 url 연결-->
+                <form class="yesBtn" method="post">
+                    {% csrf_token %}
+                    <button type="button" class="delete_button">네</button>
+                </form>
+            </a>
+
+            <p class="information">네 선택 시 영구적으로 삭제됩니다.</p>
+        </div>
+    </div>
+
+    <!--수정/삭제 버튼 부분 / ★★남의 게시글이면 여기 없어도 되겠지? 아니면 버튼 하나 지우고 신고하기 등으로 바꿔도 될듯-->
+    <div class="btns"> <!--삭제하기/수정하기 버튼들-->
+        <div>
+            <a href="{% url 'board_update' pk=board.pk %}"> <!--★★글 수정하는 곳으로 url 연결-->
+                <button type="submit" class="edit">수정하기</button>
+            </a>
+        </div>
+        <div><button class="delete" id="open-modal">삭제하기</button></div>
+    </div><!--삭제하기/수정하기 버튼들 끝-->
+
+    <button class="plus" id="plusBtn"> <!--플러스 버튼-->
+        <img src="{% static 'img/plus.png' %}" alt="">
+    </button>
+    <!--수정/삭제 버튼 부분 끝-->
+    {% endif %}
+</div>
+
+<script src="{% static 'js/post_detail.js' %}"></script>
+{% endblock %}

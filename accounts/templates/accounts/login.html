@@ -1,0 +1,26 @@
+{% extends 'nav_bar.html' %}
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <div class = "container">
+        <!--로고 부분-->
+        <div id="logo"> 
+            <img src="{% static 'img/tipton.png' %}" alt="로고 사진">
+        </div>
+        <!--로고 부분 끝-->
+
+        <!--★★입력창 form 부분-->
+        <form  name="login-form" action="{% url 'accounts:login' %}" method="post" class ="user">
+            {% csrf_token %}
+            <input type="text" placeholder="ID" class="inputStyle" name="username" value="" required> <!--★★아이디 입력 받는 부분-->
+            <input type="password" name="password" placeholder="PW" class="inputStyle" required> <!--★★비밀번호 입력 받는 부분-->
+            <div class = "buttons"> <!--로그인/회원가입 버튼들 -->
+                <button type="submit" class="buttonStyle">Log in</button><br> <!--로그인 버튼-->
+                <a href="{% url 'accounts:signup' %}"><!--★★회원가입 페이지로 url 연결-->
+                    <button type="button" class ="buttonStyle">Sign up</button> <!--회원가입 버튼-->
+                </a>
+            </div>
+        </form>
+        <!--입력창 form 끝-->
+    </div>
+{% endblock %}
